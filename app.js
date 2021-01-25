@@ -22,7 +22,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
-// Routes
+// Route
 const loginRoute = require('./routes/loginRoutes');
 const registerRoute = require('./routes/registerRoutes');
 const logoutRoute = require('./routes/logout');
