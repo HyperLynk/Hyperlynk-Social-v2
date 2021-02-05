@@ -1,6 +1,18 @@
 var connected = false;
 
-var socket = io("http://localhost:3003")
+    var socketUrl = "https://hyperlynk.herokuapp.com"; // ADD YOUR HOSTED URL HERE
+     
+    if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+        // If in localhost, use this url
+        socketUrl = "https://hyperlynk.herokuapp.com";
+    }
+     
+    var socket = io(socketUrl);
+
+
+
+
+
 socket.emit("setup", userLoggedIn);
 
 socket.on("connected", () => connected = true);
